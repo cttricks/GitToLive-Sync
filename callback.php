@@ -6,6 +6,8 @@ define('PAT',       'YOUR_PERSONAL_ACCESS_TOKEN');
 define('SECRET',    'WEBHOOK_SECRET');
 define('HOOK_ID',   'WEBHOOK_ID');
 
+ini_set('memory_limit', '1G');
+
 class GitToLive {
 
     protected $payload;
