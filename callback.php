@@ -90,7 +90,7 @@ class GitToLive {
             ];
             
             $context = stream_context_create($options);
-            $fileContent = file_get_contents('https://raw.githubusercontent.com/'. USER .'/'. REPO .'/master/'. $file, false, $context);
+            $fileContent = file_get_contents('https://raw.githubusercontent.com/'. USER .'/'. REPO .'/master/'. $file .'?v='. time(), false, $context);
             
             //Compose File
             file_put_contents($dir.'/'. $fileName, $fileContent);
